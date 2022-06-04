@@ -27,17 +27,20 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 			return Optional.of(null);
 		}
 	}
-
-	@Override
-	public Optional<Employee> getEmployeeById(Employee employee) {
-		return Optional.of(employeeDB.get(employee.getEmpId()));
-		
-		
+	
+	public Optional<Employee> getEmployeeById(Integer empId) {
+		return Optional.of(employeeDB.get(empId));
 	}
 
 	@Override
 	public List<Employee> getEmployees() {
 		return new ArrayList<Employee>(employeeDB.values());		
+	}
+
+	@Override
+	public Optional<Employee> getEmployeeById(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
